@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AQA JSONPlaceholder">
+    <test name="GetPosts">
+        <classes>
+            <class name="jsonplaceholder.testng.tests.GETPosts"/>
+        </classes>
+    </test>
+    <test name="GetSelectivePosts">
+        <parameter name="PostId" value="99"/>
+        <classes>
+            <class name="jsonplaceholder.testng.tests.GETPostById"/></classes>
+    </test>
+    <test name="GetSelectivePostsNegative">
+        <parameter name="PostId" value="150"/>
+        <classes>
+            <class name="jsonplaceholder.testng.tests.GETNonExistentPost"/>
+    </classes>
+    </test>
+    <test name="GetUsers">
+        <classes>
+            <class name="jsonplaceholder.testng.tests.GETUsers"/></classes>
+    </test>
+    <test name="GetSelectiveUsers">
+        <parameter name="UserId" value="5"/>
+        <classes>
+            <class name="jsonplaceholder.testng.tests.GETUserById"/></classes>
+    </test>
+    <test name="PostNewRecord">
+        <classes>
+            <class name="jsonplaceholder.testng.tests.POSTRecord"/></classes>
+    </test>
+</suite>
